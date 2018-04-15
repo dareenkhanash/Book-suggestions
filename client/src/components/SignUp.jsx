@@ -6,7 +6,7 @@ class SignUp extends React.Component {
   constructor(props) {
     super(props);
      this.state ={states:{
-      userName: "",
+      username: "",
       password:"",
       book:""
      }}
@@ -43,7 +43,7 @@ class SignUp extends React.Component {
 
   render() {
     return (
-     <div><h3>User Name</h3><input type="text" name="userName" onChange={this.onChange}/>
+     <div><h3>User Name</h3><input type="text" name="username" onChange={this.onChange}/>
       <h3>Password</h3><input type="text" name="password" onChange={this.onChange}/>
       <h3>Book</h3><input type="text" name="book" onChange={this.onChange}/>
       <button onClick={this.save}>Add Book</button>

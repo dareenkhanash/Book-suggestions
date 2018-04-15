@@ -7,29 +7,31 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: [],
-    };
+      users: []
+    }
   this.getData();
- console.log(this.state.users)
+ //console.log(this.state.users)
   }
   getData(){
   	var that=this
   	$.ajax({
   		type: 'GET',
-  		url:"/",
+  		url:"/users",
   		success:(data)=>{
-console.log(data)
+
   		that.setState({
           users: data
         })
+        console.log(that.state.users);
   		}
+
   	})
   }
 
   render() {
     return (
      <div><SignUp />
-     <books users={this.state.users} />
+     <books users={this.state.users}/>
      </div>
     )
   }

@@ -26,8 +26,15 @@ let save = (data) => {
   		book:data.book
   	
   	}
+  	console.log(obj)
   	var user = new User(obj);
-  	user.save();
+  	user.save(function(err,user){
+  		if(err){
+  			console.log("not working");
+  		}else{
+  			console.log("saved");
+  		}
+  	});
 
 }
 module.exports.User = User;
