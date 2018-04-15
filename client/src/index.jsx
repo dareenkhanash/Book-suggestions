@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import SignUp from './components/SignUp.jsx';
-import books from './components/books.jsx';
+import Books from './components/books.jsx';
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -30,10 +30,13 @@ class App extends React.Component {
 
   render() {
     return (
-     <div><SignUp />
-     <books users={this.state.users}/>
+     <div><SignUp getData={this.getData} />
+     <Books users={this.state.users}/>
      </div>
     )
   }
 }
+
+
 ReactDOM.render(<App />, document.getElementById('app'));
+export default App;

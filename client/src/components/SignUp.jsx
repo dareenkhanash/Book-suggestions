@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-
+import Books from './books.jsx';
 class SignUp extends React.Component {
   constructor(props) {
     super(props);
@@ -32,7 +32,8 @@ class SignUp extends React.Component {
       url: '/',
       data: that.state.states,
       success: function (msg) {
-    console.log("success")
+    console.log("success");
+    //that.props.getData();
       },
       error: function (request, status, error) {
         console.log(error);
@@ -41,13 +42,16 @@ class SignUp extends React.Component {
    
   }
 
+// <p>Password</p><input type="text" name="password" onChange={this.onChange}/>
   render() {
     return (
-     <div><h3>User Name</h3><input type="text" name="username" onChange={this.onChange}/>
-      <h3>Password</h3><input type="text" name="password" onChange={this.onChange}/>
-      <h3>Book</h3><input type="text" name="book" onChange={this.onChange}/>
-      <button onClick={this.save}>Add Book</button>
+     <div><p>User Name</p><input type="text" name="username" onChange={this.onChange}/>
+     
+      <p>Book</p><input type="text" name="book" onChange={this.onChange}/>
+      <button onClick={this.save} >Add Book</button>
+
       </div>
+
     )
   }
 }

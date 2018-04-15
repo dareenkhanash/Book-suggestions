@@ -7,7 +7,7 @@ class Book extends React.Component {
 		let book = this.props.book;
 		if (book !== undefined){
 			return (
-				<div >
+				<div className="onebook">
 				    <h3>{book.book}</h3>
 				    <p>{book.username}</p>
 				</div>

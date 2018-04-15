@@ -1,7 +1,7 @@
 import React from 'react';
 import Book from './Book.jsx';
 
-class books extends React.Component {
+class Books extends React.Component {
   constructor(props) {
       super(props);
   }
@@ -9,7 +9,7 @@ class books extends React.Component {
     let arr = [];
 
     let books = this.props.users
-   
+
     if (books !== undefined){
       books.forEach((book) => {
         arr.push(<Book book={book} />)
@@ -23,4 +23,4 @@ class books extends React.Component {
 
   }
 }
-export default books;
+export default Books;
