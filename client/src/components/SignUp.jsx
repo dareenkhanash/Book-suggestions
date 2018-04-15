@@ -33,7 +33,7 @@ class SignUp extends React.Component {
       data: that.state.states,
       success: function (msg) {
     console.log("success");
-    //that.props.getData();
+    that.props.getData();
       },
       error: function (request, status, error) {
         console.log(error);
@@ -45,7 +45,9 @@ class SignUp extends React.Component {
 // <p>Password</p><input type="text" name="password" onChange={this.onChange}/>
   render() {
     return (
-     <div><p>User Name</p><input type="text" name="username" onChange={this.onChange}/>
+     <div>
+     <h1>Book Suggestions</h1>
+     <p>User Name</p><input type="text" name="username" onChange={this.onChange}/>
      
       <p>Book</p><input type="text" name="book" onChange={this.onChange}/>
       <button onClick={this.save} >Add Book</button>

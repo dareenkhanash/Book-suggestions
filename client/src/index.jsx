@@ -30,7 +30,7 @@ class App extends React.Component {
 
   render() {
     return (
-     <div><SignUp getData={this.getData} />
+     <div><SignUp getData={this.getData.bind(this)} />
      <Books users={this.state.users}/>
      </div>
     )
